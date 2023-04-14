@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		ED266EEC29E42FBE009AE83D /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED266EEB29E42FBE009AE83D /* DetailHeaderView.swift */; };
 		ED266EEE29E430CA009AE83D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED266EED29E430CA009AE83D /* DetailViewController.swift */; };
+		ED3A548229E626E600B23CFD /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548029E626E600B23CFD /* Nunito-Regular.ttf */; };
+		ED3A548329E626E600B23CFD /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548029E626E600B23CFD /* Nunito-Regular.ttf */; };
+		ED3A548429E626E600B23CFD /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548129E626E600B23CFD /* Nunito-Bold.ttf */; };
+		ED3A548529E626E600B23CFD /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548129E626E600B23CFD /* Nunito-Bold.ttf */; };
 		ED4A8A3B29DEA94700CEE2E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A8A3A29DEA94700CEE2E3 /* AppDelegate.swift */; };
 		ED4A8A3D29DEA94700CEE2E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A8A3C29DEA94700CEE2E3 /* SceneDelegate.swift */; };
 		ED4A8A3F29DEA94700CEE2E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A8A3E29DEA94700CEE2E3 /* ViewController.swift */; };
@@ -53,6 +57,8 @@
 /* Begin PBXFileReference section */
 		ED266EEB29E42FBE009AE83D /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		ED266EED29E430CA009AE83D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		ED3A548029E626E600B23CFD /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		ED3A548129E626E600B23CFD /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		ED4A8A3729DEA94700CEE2E3 /* Homely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4A8A3A29DEA94700CEE2E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4A8A3C29DEA94700CEE2E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +112,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED3A547E29E6263200B23CFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A547F29E6264400B23CFD /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED3A547F29E6264400B23CFD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A548129E626E600B23CFD /* Nunito-Bold.ttf */,
+				ED3A548029E626E600B23CFD /* Nunito-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		ED4A8A2E29DEA94700CEE2E3 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +157,7 @@
 		ED4A8A3929DEA94700CEE2E3 /* Homely */ = {
 			isa = PBXGroup;
 			children = (
+				ED3A547E29E6263200B23CFD /* Resources */,
 				ED4A8A4B29DEA94800CEE2E3 /* Info.plist */,
 				ED6ACC4C29DFD8A1008F5002 /* Model */,
 				ED6ACC4D29DFD8AA008F5002 /* View */,
@@ -313,9 +337,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED3A548229E626E600B23CFD /* Nunito-Regular.ttf in Resources */,
 				ED4A8A4A29DEA94800CEE2E3 /* LaunchScreen.storyboard in Resources */,
 				ED4A8A4729DEA94800CEE2E3 /* Assets.xcassets in Resources */,
 				ED4A8A6E29DEACDE00CEE2E3 /* GoogleService-Info.plist in Resources */,
+				ED3A548429E626E600B23CFD /* Nunito-Bold.ttf in Resources */,
 				ED4A8A4229DEA94700CEE2E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +350,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED3A548529E626E600B23CFD /* Nunito-Bold.ttf in Resources */,
+				ED3A548329E626E600B23CFD /* Nunito-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

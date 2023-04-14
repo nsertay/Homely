@@ -11,7 +11,7 @@ class DetailHeaderView: UIView {
     
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var apartmentNameLabel: UILabel!
-   
+    @IBOutlet weak var apartmentAddressLabel: UILabel!
     @IBOutlet weak var apartmentCityLabel: UILabel!
     @IBOutlet weak var apartmentYearLabel: UILabel!
     

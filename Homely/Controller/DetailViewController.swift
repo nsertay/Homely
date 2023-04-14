@@ -16,12 +16,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.hidesBarsOnSwipe = true
         
-
-        print(apartment)
         headerView.apartmentNameLabel.text = apartment.name
+        headerView.apartmentAddressLabel.text = apartment.address
         headerView.apartmentCityLabel.text = apartment.city
         headerView.apartmentYearLabel.text = apartment.commisDate
         
@@ -41,6 +39,16 @@ class DetailViewController: UIViewController {
             task.resume()
         }
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+       
+    }
+    
+   
+    @IBAction func closeDetail(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
 }

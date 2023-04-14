@@ -12,6 +12,8 @@ import FirebaseStorage
 
 class MainTableViewController: UITableViewController {
     
+    @IBOutlet weak var changeCityOutlet: UIBarButtonItem!
+    
     let db = Firestore.firestore()
     let storage = Storage.storage()
    
@@ -22,10 +24,30 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+ 
+        if let appearance = navigationController?.navigationBar.standardAppearance {
+            appearance.configureWithTransparentBackground()
+            
+            if let customFont = UIFont(name: "Nunito-Bold", size: 50.0) {
+                appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "MainColor")!]
+                appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "MainColor")!, .font: customFont]
+            }
+            
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+                
+        }
+        
         tableView.delegate = self
         tableView.dataSource = dataSource
 
         getData()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
     }
     
     func getData() {
@@ -55,6 +77,7 @@ class MainTableViewController: UITableViewController {
                 self.dataSource.apply(snapshot, animatingDifferences: false)
             }
         }
+    
     
     func configureDataSource() -> ApartmentDiffableDataSource {
         
@@ -109,4 +132,19 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return apartments.count
     }
+    
+    @IBAction func changeCity(_ sender: UIBarButtonItem) {
+        
+        
+        let alertController = UIAlertController(title: "City", message: "Choosing city", preferredStyle: .alert)
+        
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+        
+        alertController.addAction(alertAction)
+        
+        present(alertController, animated: true)
+        
+    }
+    
+    
 }
