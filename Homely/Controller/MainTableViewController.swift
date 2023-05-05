@@ -10,14 +10,22 @@ import Firebase
 import FirebaseStorage
 
 
+
 class MainTableViewController: UITableViewController {
     
-    @IBOutlet weak var changeCityOutlet: UIBarButtonItem!
+    @IBOutlet weak var changeCityOutlet: UITabBarItem!
     
     let db = Firestore.firestore()
     let storage = Storage.storage()
-   
+    
+    var cities: [String] = ["All cities", "Astana", "Almaty", "Shymkent", "Aktobe", "Karagandy", "Semey", "Aktau", "Atyrau", "Kokshetau", "Pavlodar", "Taldykorgan", "Saryozek"]
+    
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height / 2
+    
+    var selectedRow = 0
     var apartments: [Apartment] = []
+    var apartment = Apartment()
     
     lazy var dataSource = configureDataSource()
     
@@ -46,37 +54,58 @@ class MainTableViewController: UITableViewController {
         getData()
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+    func getData() {
+        
+        db.collection("apartments").getDocuments { (querySnapshot, error) in
+            guard let querySnapshot = querySnapshot else {
+                print("Error getting documents: \(error!.localizedDescription)")
+                return
+            }
+            for document in querySnapshot.documents {
+                let data = document.data()
+                
+                let apartment = Apartment(
+                    name: data["name"] as? String ?? "",
+                    price: data["price"] as? String ?? "",
+                    address: data["address"] as? String ?? "",
+                    city: data["city"] as? String ?? "",
+                    commisDate: data["commisDate"] as? String ?? "",
+                    image: data["image"] as? String ?? ""
+                )
+                self.apartments.append(apartment)
+            }
+            
+            self.updateSnapshot()
+        }
     }
     
-    func getData() {
+    func updateSnapshot(animatingChange: Bool = false) {
+        
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Apartment>()
+        snapshot.appendSections([.all])
+        snapshot.appendItems(self.apartments, toSection: .all)
+        self.dataSource.apply(snapshot, animatingDifferences: false)
+        
+        
+    }
+    
+    func updateSnapshotCity(animatingChange: Bool = false, city: String) {
+       
+        if city == "All cities" {
+            updateSnapshot()
+        } else {
             
-            db.collection("apartments").getDocuments { (querySnapshot, error) in
-                guard let querySnapshot = querySnapshot else {
-                    print("Error getting documents: \(error!.localizedDescription)")
-                    return
-                }
-                for document in querySnapshot.documents {
-                    let data = document.data()
-                        
-                    let apartment = Apartment(
-                        name: data["name"] as? String ?? "",
-                        price: data["price"] as? String ?? "",
-                        address: data["address"] as? String ?? "",
-                        city: data["city"] as? String ?? "",
-                        commisDate: data["commisDate"] as? String ?? "",
-                        image: data["image"] as? String ?? ""
-                    )
-                    self.apartments.append(apartment)
-                }
-                  
-                var snapshot = NSDiffableDataSourceSnapshot<Section, Apartment>()
-                snapshot.appendSections([.all])
-                snapshot.appendItems(self.apartments, toSection: .all)
-                self.dataSource.apply(snapshot, animatingDifferences: false)
-            }
+            let filtredApartments = apartments.filter { $0.city == city }
+            
+            var snapshot = NSDiffableDataSourceSnapshot<Section, Apartment>()
+            snapshot.appendSections([.all])
+            snapshot.appendItems(filtredApartments, toSection: .all)
+            self.dataSource.apply(snapshot, animatingDifferences: true)
         }
+        
+        
+    }
     
     
     func configureDataSource() -> ApartmentDiffableDataSource {
@@ -115,36 +144,79 @@ class MainTableViewController: UITableViewController {
         )
         return dataSource
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let destinationController = segue.destination as! DetailViewController
-                destinationController.apartment = self.apartments[indexPath.row]
-            }
-        }
-    }
   
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let rootVC = DetailViewController()
+        rootVC.apartment1 = apartments[indexPath.row]
+        
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return apartments.count
     }
+      
+}
+
+extension MainTableViewController: UIPickerViewDelegate,  UIPickerViewDataSource {
     
-    @IBAction func changeCity(_ sender: UIBarButtonItem) {
-        
-        
-        let alertController = UIAlertController(title: "City", message: "Choosing city", preferredStyle: .alert)
-        
-        let alertAction = UIAlertAction(title: "Ok", style: .cancel)
-        
-        alertController.addAction(alertAction)
-        
-        present(alertController, animated: true)
-        
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 30))
+        label.text = cities[row]
+        label.sizeToFit()
+
+        return label
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+      
+        return 1
+    }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return cities.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        
+        return 60
+    }
+    
+    @IBAction func changeCity(_ sender: UIBarButtonItem) {
+  
+        let vc = UIViewController()
+        vc.preferredContentSize = CGSize(width: screenWidth, height: screenHeight)
+       
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.selectRow(selectedRow, inComponent: 0, animated: false)
+        vc.view.addSubview(pickerView)
+        pickerView.centerXAnchor.constraint(equalTo: vc.view.centerXAnchor).isActive = true
+        pickerView.centerYAnchor.constraint(equalTo: vc.view.centerYAnchor).isActive = true
+        
+        let alert = UIAlertController(title: "Select city", message: nil, preferredStyle: .actionSheet)
+        alert.setValue(vc, forKey: "contentViewController")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { UIAlertAction in
+            self.selectedRow = pickerView.selectedRow(inComponent: 0)
+            let selected = self.cities[self.selectedRow]
+            self.changeCityOutlet.title = selected
+            self.updateSnapshotCity(city: selected)
+        }))
+        self.present(alert, animated: true)
+        
+    }
 }

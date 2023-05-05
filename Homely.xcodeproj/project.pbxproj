@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED266EEC29E42FBE009AE83D /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED266EEB29E42FBE009AE83D /* DetailHeaderView.swift */; };
-		ED266EEE29E430CA009AE83D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED266EED29E430CA009AE83D /* DetailViewController.swift */; };
+		ED0073E429FA61B200AE53D3 /* DetailCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0073E329FA61B200AE53D3 /* DetailCallCell.swift */; };
+		ED28AE4B29F8D10B00210BAF /* DetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28AE4A29F8D10B00210BAF /* DetailTableView.swift */; };
+		ED28AE4D29F8D12300210BAF /* DetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28AE4C29F8D12300210BAF /* DetailUIView.swift */; };
+		ED28AE5029F8D1E700210BAF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED28AE4F29F8D1E700210BAF /* SnapKit */; };
+		ED28AE5229F8D25700210BAF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28AE5129F8D25700210BAF /* DetailViewController.swift */; };
 		ED3A548229E626E600B23CFD /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548029E626E600B23CFD /* Nunito-Regular.ttf */; };
 		ED3A548329E626E600B23CFD /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548029E626E600B23CFD /* Nunito-Regular.ttf */; };
 		ED3A548429E626E600B23CFD /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548129E626E600B23CFD /* Nunito-Bold.ttf */; };
 		ED3A548529E626E600B23CFD /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED3A548129E626E600B23CFD /* Nunito-Bold.ttf */; };
+		ED41F68329FA15D4006A5AD5 /* DetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41F68229FA15D4006A5AD5 /* DetailMapCell.swift */; };
+		ED41F68529FA1999006A5AD5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41F68429FA1999006A5AD5 /* MapViewController.swift */; };
 		ED4A8A3B29DEA94700CEE2E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A8A3A29DEA94700CEE2E3 /* AppDelegate.swift */; };
 		ED4A8A3D29DEA94700CEE2E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A8A3C29DEA94700CEE2E3 /* SceneDelegate.swift */; };
 		ED4A8A3F29DEA94700CEE2E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4A8A3E29DEA94700CEE2E3 /* ViewController.swift */; };
@@ -35,6 +40,8 @@
 		ED54092529E230A10099C97B /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54092429E230A10099C97B /* Apartment.swift */; };
 		ED54092729E2397D0099C97B /* ApartmentDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54092629E2397D0099C97B /* ApartmentDiffableDataSource.swift */; };
 		ED6ACC5429DFD98F008F5002 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6ACC5329DFD98F008F5002 /* MainTableViewCell.swift */; };
+		ED862AF629F927B10092F02C /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED862AF529F927B10092F02C /* DetailTableViewCell.swift */; };
+		EDA65A0029FBD76C00C0A973 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA659FF29FBD76C00C0A973 /* DescriptionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +62,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ED266EEB29E42FBE009AE83D /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
-		ED266EED29E430CA009AE83D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		ED0073E329FA61B200AE53D3 /* DetailCallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCallCell.swift; sourceTree = "<group>"; };
+		ED28AE4A29F8D10B00210BAF /* DetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableView.swift; sourceTree = "<group>"; };
+		ED28AE4C29F8D12300210BAF /* DetailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUIView.swift; sourceTree = "<group>"; };
+		ED28AE5129F8D25700210BAF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		ED3A548029E626E600B23CFD /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		ED3A548129E626E600B23CFD /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		ED41F68229FA15D4006A5AD5 /* DetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapCell.swift; sourceTree = "<group>"; };
+		ED41F68429FA1999006A5AD5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ED4A8A3729DEA94700CEE2E3 /* Homely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4A8A3A29DEA94700CEE2E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4A8A3C29DEA94700CEE2E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +90,8 @@
 		ED54092429E230A10099C97B /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		ED54092629E2397D0099C97B /* ApartmentDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentDiffableDataSource.swift; sourceTree = "<group>"; };
 		ED6ACC5329DFD98F008F5002 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		ED862AF529F927B10092F02C /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		EDA659FF29FBD76C00C0A973 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +102,7 @@
 				ED4A8A7129DEAE2C00CEE2E3 /* FirebaseAnalytics in Frameworks */,
 				ED4A8A7529DEAE2C00CEE2E3 /* FirebaseAuth in Frameworks */,
 				ED4A8A7729DEAE2C00CEE2E3 /* FirebaseDatabase in Frameworks */,
+				ED28AE5029F8D1E700210BAF /* SnapKit in Frameworks */,
 				ED4A8A7929DEAE2C00CEE2E3 /* FirebaseFirestore in Frameworks */,
 				ED4A8A7329DEAE2C00CEE2E3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				ED4A8A7B29DEAE2C00CEE2E3 /* FirebaseStorage in Frameworks */,
@@ -197,7 +211,12 @@
 			isa = PBXGroup;
 			children = (
 				ED6ACC5329DFD98F008F5002 /* MainTableViewCell.swift */,
-				ED266EEB29E42FBE009AE83D /* DetailHeaderView.swift */,
+				ED28AE4A29F8D10B00210BAF /* DetailTableView.swift */,
+				ED28AE4C29F8D12300210BAF /* DetailUIView.swift */,
+				ED862AF529F927B10092F02C /* DetailTableViewCell.swift */,
+				ED41F68229FA15D4006A5AD5 /* DetailMapCell.swift */,
+				ED0073E329FA61B200AE53D3 /* DetailCallCell.swift */,
+				EDA659FF29FBD76C00C0A973 /* DescriptionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,7 +227,8 @@
 				ED4A8A3E29DEA94700CEE2E3 /* ViewController.swift */,
 				ED4A8A7C29DEB88B00CEE2E3 /* RegisterViewController.swift */,
 				ED4A8A7E29DEBBAE00CEE2E3 /* MainTableViewController.swift */,
-				ED266EED29E430CA009AE83D /* DetailViewController.swift */,
+				ED28AE5129F8D25700210BAF /* DetailViewController.swift */,
+				ED41F68429FA1999006A5AD5 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +265,7 @@
 				ED4A8A7629DEAE2C00CEE2E3 /* FirebaseDatabase */,
 				ED4A8A7829DEAE2C00CEE2E3 /* FirebaseFirestore */,
 				ED4A8A7A29DEAE2C00CEE2E3 /* FirebaseStorage */,
+				ED28AE4F29F8D1E700210BAF /* SnapKit */,
 			);
 			productName = Homely;
 			productReference = ED4A8A3729DEA94700CEE2E3 /* Homely.app */;
@@ -320,6 +341,7 @@
 			mainGroup = ED4A8A2E29DEA94700CEE2E3;
 			packageReferences = (
 				ED4A8A6F29DEAE2C00CEE2E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				ED28AE4E29F8D1E700210BAF /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = ED4A8A3829DEA94700CEE2E3 /* Products */;
 			projectDirPath = "";
@@ -371,15 +393,21 @@
 			files = (
 				ED54092729E2397D0099C97B /* ApartmentDiffableDataSource.swift in Sources */,
 				ED4A8A3F29DEA94700CEE2E3 /* ViewController.swift in Sources */,
+				EDA65A0029FBD76C00C0A973 /* DescriptionCell.swift in Sources */,
 				ED4A8A7D29DEB88B00CEE2E3 /* RegisterViewController.swift in Sources */,
+				ED862AF629F927B10092F02C /* DetailTableViewCell.swift in Sources */,
 				ED4A8A4529DEA94700CEE2E3 /* Homely.xcdatamodeld in Sources */,
 				ED6ACC5429DFD98F008F5002 /* MainTableViewCell.swift in Sources */,
 				ED54092529E230A10099C97B /* Apartment.swift in Sources */,
+				ED41F68329FA15D4006A5AD5 /* DetailMapCell.swift in Sources */,
+				ED28AE4D29F8D12300210BAF /* DetailUIView.swift in Sources */,
+				ED28AE5229F8D25700210BAF /* DetailViewController.swift in Sources */,
+				ED28AE4B29F8D10B00210BAF /* DetailTableView.swift in Sources */,
 				ED4A8A3B29DEA94700CEE2E3 /* AppDelegate.swift in Sources */,
-				ED266EEC29E42FBE009AE83D /* DetailHeaderView.swift in Sources */,
 				ED4A8A7F29DEBBAE00CEE2E3 /* MainTableViewController.swift in Sources */,
+				ED41F68529FA1999006A5AD5 /* MapViewController.swift in Sources */,
+				ED0073E429FA61B200AE53D3 /* DetailCallCell.swift in Sources */,
 				ED4A8A3D29DEA94700CEE2E3 /* SceneDelegate.swift in Sources */,
-				ED266EEE29E430CA009AE83D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +747,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ED28AE4E29F8D1E700210BAF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		ED4A8A6F29DEAE2C00CEE2E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -730,6 +766,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ED28AE4F29F8D1E700210BAF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED28AE4E29F8D1E700210BAF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		ED4A8A7029DEAE2C00CEE2E3 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ED4A8A6F29DEAE2C00CEE2E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
