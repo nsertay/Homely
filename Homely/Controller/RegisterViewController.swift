@@ -12,16 +12,10 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-         
-    }
-    
+   
     @IBAction func registerButtonTapped(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text, email != "", password != "" else {
-           
+            
             errorAlert(text: "Info is incorrect")
             return
         }
@@ -35,10 +29,7 @@ class RegisterViewController: UIViewController {
                 self?.errorAlert(text: error!.localizedDescription)
             }
         }
-        
     }
-    
-    
     
     func errorAlert(text: String) {
         

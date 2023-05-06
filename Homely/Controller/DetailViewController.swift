@@ -80,8 +80,6 @@ extension DetailViewController: MyViewDelegate  {
 
 extension DetailViewController: UITableViewDelegate {
     
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:

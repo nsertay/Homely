@@ -36,47 +36,35 @@ class ViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         
         guard let email = emailTextField.text, let password = passwordTextField.text, email != "", password != "" else {
-           
             errorAlert(text: "Info is incorrect")
             return
         }
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self ] (user, error) in
-            
             if error != nil {
-                
                 self?.errorAlert(text: error!.localizedDescription)
-                
                 return
             }
             
             if user != nil {
                 self?.performSegue(withIdentifier: "gototab", sender: nil)
-                
                 return
             }
-            
             self?.errorAlert(text: error!.localizedDescription)
         })
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
-        
         self.performSegue(withIdentifier: "register", sender: nil)
-
     }
-    
-    
     
     func errorAlert(text: String) {
         
         let errorAlertController = UIAlertController(title: "", message: text, preferredStyle: .alert)
-        
         let alertAction = UIAlertAction(title: "Ok", style: .destructive)
         errorAlertController.addAction(alertAction)
         
         present(errorAlertController, animated: true)
     }
-    
 }
 

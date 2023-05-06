@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 enum Section {
     case all
 }
@@ -18,4 +17,5 @@ class ApartmentDiffableDataSource: UITableViewDiffableDataSource<Section, Apartm
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
 }

@@ -17,28 +17,26 @@
         weak var delegate: MyViewDelegate?
        
         func configure(with info: Apartment) {
-            apartmentImageView.image = UIImage(named: "esentay")
             
-//            if let url = URL(string: info.image) {
-//                let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//                    guard let data = data, error == nil else {
-//                        print("Error downloading image: \(error?.localizedDescription ?? "Unknown error")")
-//                        return
-//                    }
-//
-//                    DispatchQueue.main.async {
-//                        if let image = UIImage(data: data) {
-//                            self.apartmentImageView.image = image
-//                        }
-//                    }
-//                }
-//                task.resume()
-//            }
+            if let url = URL(string: info.image) {
+                let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                    guard let data = data, error == nil else {
+                        print("Error downloading image: \(error?.localizedDescription ?? "Unknown error")")
+                        return
+                    }
+
+                    DispatchQueue.main.async {
+                        if let image = UIImage(data: data) {
+                            self.apartmentImageView.image = image
+                        }
+                    }
+                }
+                task.resume()
+            }
         }
-        
+    
         init() {
             super.init(frame: .zero)
-            
             initialize()
         }
         
@@ -63,8 +61,7 @@
             static let labelColor = UIColor(named: "labelColorWhite")
             static let blackWithOpacityLow = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
         }
-      
-        
+    
     }
 
     private extension DetailUIView {

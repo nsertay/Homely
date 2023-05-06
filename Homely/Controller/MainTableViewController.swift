@@ -9,8 +9,6 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-
-
 class MainTableViewController: UITableViewController {
     
     @IBOutlet weak var changeCityOutlet: UITabBarItem!
@@ -25,6 +23,7 @@ class MainTableViewController: UITableViewController {
     
     var selectedRow = 0
     var apartments: [Apartment] = []
+    var apartmentsCopy: [Apartment] = []
     var apartment = Apartment()
     
     lazy var dataSource = configureDataSource()
@@ -74,38 +73,30 @@ class MainTableViewController: UITableViewController {
                 )
                 self.apartments.append(apartment)
             }
+            self.apartmentsCopy = self.apartments
+            self.updateSnapshot(city: "All cities")
             
-            self.updateSnapshot()
         }
     }
     
-    func updateSnapshot(animatingChange: Bool = false) {
+    func updateSnapshot(city: String, animatingChange: Bool = false) {
         
+        apartments = apartmentsCopy
+        
+        if city != "All cities" {
+            let filtredApartments = apartments.filter { $0.city == city }
+            apartments = filtredApartments
+        }
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Apartment>()
         snapshot.appendSections([.all])
         snapshot.appendItems(self.apartments, toSection: .all)
-        self.dataSource.apply(snapshot, animatingDifferences: false)
         
+        self.dataSource.apply(snapshot, animatingDifferences: false)
         
     }
     
-    func updateSnapshotCity(animatingChange: Bool = false, city: String) {
-       
-        if city == "All cities" {
-            updateSnapshot()
-        } else {
-            
-            let filtredApartments = apartments.filter { $0.city == city }
-            
-            var snapshot = NSDiffableDataSourceSnapshot<Section, Apartment>()
-            snapshot.appendSections([.all])
-            snapshot.appendItems(filtredApartments, toSection: .all)
-            self.dataSource.apply(snapshot, animatingDifferences: true)
-        }
-        
-        
-    }
+    
     
     
     func configureDataSource() -> ApartmentDiffableDataSource {
@@ -214,7 +205,7 @@ extension MainTableViewController: UIPickerViewDelegate,  UIPickerViewDataSource
             self.selectedRow = pickerView.selectedRow(inComponent: 0)
             let selected = self.cities[self.selectedRow]
             self.changeCityOutlet.title = selected
-            self.updateSnapshotCity(city: selected)
+            self.updateSnapshot(city: selected)
         }))
         self.present(alert, animated: true)
         

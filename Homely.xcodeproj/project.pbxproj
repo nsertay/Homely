@@ -41,7 +41,6 @@
 		ED54092729E2397D0099C97B /* ApartmentDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54092629E2397D0099C97B /* ApartmentDiffableDataSource.swift */; };
 		ED6ACC5429DFD98F008F5002 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6ACC5329DFD98F008F5002 /* MainTableViewCell.swift */; };
 		ED862AF629F927B10092F02C /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED862AF529F927B10092F02C /* DetailTableViewCell.swift */; };
-		EDA65A0029FBD76C00C0A973 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA659FF29FBD76C00C0A973 /* DescriptionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +90,6 @@
 		ED54092629E2397D0099C97B /* ApartmentDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentDiffableDataSource.swift; sourceTree = "<group>"; };
 		ED6ACC5329DFD98F008F5002 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		ED862AF529F927B10092F02C /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
-		EDA659FF29FBD76C00C0A973 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +214,6 @@
 				ED862AF529F927B10092F02C /* DetailTableViewCell.swift */,
 				ED41F68229FA15D4006A5AD5 /* DetailMapCell.swift */,
 				ED0073E329FA61B200AE53D3 /* DetailCallCell.swift */,
-				EDA659FF29FBD76C00C0A973 /* DescriptionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 			files = (
 				ED54092729E2397D0099C97B /* ApartmentDiffableDataSource.swift in Sources */,
 				ED4A8A3F29DEA94700CEE2E3 /* ViewController.swift in Sources */,
-				EDA65A0029FBD76C00C0A973 /* DescriptionCell.swift in Sources */,
 				ED4A8A7D29DEB88B00CEE2E3 /* RegisterViewController.swift in Sources */,
 				ED862AF629F927B10092F02C /* DetailTableViewCell.swift in Sources */,
 				ED4A8A4529DEA94700CEE2E3 /* Homely.xcdatamodeld in Sources */,

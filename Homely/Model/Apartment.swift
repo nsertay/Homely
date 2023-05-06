@@ -15,4 +15,5 @@ struct Apartment: Hashable{
     var city: String = ""
     var commisDate: String = ""
     var image: String = ""
+    
 }

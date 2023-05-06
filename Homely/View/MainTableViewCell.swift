@@ -14,5 +14,5 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var cellPriceLabel: UILabel!
     @IBOutlet weak var cellCityLabel: UILabel!
     @IBOutlet weak var cellYearLabel: UILabel!
-
+    
 }
