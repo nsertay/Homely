@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		ED0073E429FA61B200AE53D3 /* DetailCallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0073E329FA61B200AE53D3 /* DetailCallCell.swift */; };
+		ED1B4A022A0B4CB400AE9D3B /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B4A012A0B4CB400AE9D3B /* NewsDetailViewController.swift */; };
+		ED1B4A042A0B4CD200AE9D3B /* NewsDetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1B4A032A0B4CD200AE9D3B /* NewsDetailUIView.swift */; };
+		ED1F28ED2A077CEE00A50CAD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1F28EC2A077CEE00A50CAD /* NewsViewController.swift */; };
+		ED1F28F12A077E3C00A50CAD /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1F28F02A077E3C00A50CAD /* APICaller.swift */; };
+		ED1F28F72A07C59B00A50CAD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1F28F62A07C59B00A50CAD /* NewsTableViewCell.swift */; };
+		ED1F28FA2A07C5C200A50CAD /* NewsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1F28F92A07C5C200A50CAD /* NewsTableViewModel.swift */; };
 		ED28AE4B29F8D10B00210BAF /* DetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28AE4A29F8D10B00210BAF /* DetailTableView.swift */; };
 		ED28AE4D29F8D12300210BAF /* DetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28AE4C29F8D12300210BAF /* DetailUIView.swift */; };
 		ED28AE5029F8D1E700210BAF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED28AE4F29F8D1E700210BAF /* SnapKit */; };
@@ -40,6 +46,7 @@
 		ED54092529E230A10099C97B /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54092429E230A10099C97B /* Apartment.swift */; };
 		ED54092729E2397D0099C97B /* ApartmentDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54092629E2397D0099C97B /* ApartmentDiffableDataSource.swift */; };
 		ED6ACC5429DFD98F008F5002 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6ACC5329DFD98F008F5002 /* MainTableViewCell.swift */; };
+		ED6C69CE2A07F9DE00664289 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C69CD2A07F9DE00664289 /* NewsCollectionViewCell.swift */; };
 		ED862AF629F927B10092F02C /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED862AF529F927B10092F02C /* DetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +69,12 @@
 
 /* Begin PBXFileReference section */
 		ED0073E329FA61B200AE53D3 /* DetailCallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCallCell.swift; sourceTree = "<group>"; };
+		ED1B4A012A0B4CB400AE9D3B /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		ED1B4A032A0B4CD200AE9D3B /* NewsDetailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailUIView.swift; sourceTree = "<group>"; };
+		ED1F28EC2A077CEE00A50CAD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		ED1F28F02A077E3C00A50CAD /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		ED1F28F62A07C59B00A50CAD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		ED1F28F92A07C5C200A50CAD /* NewsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewModel.swift; sourceTree = "<group>"; };
 		ED28AE4A29F8D10B00210BAF /* DetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableView.swift; sourceTree = "<group>"; };
 		ED28AE4C29F8D12300210BAF /* DetailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUIView.swift; sourceTree = "<group>"; };
 		ED28AE5129F8D25700210BAF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +102,7 @@
 		ED54092429E230A10099C97B /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
 		ED54092629E2397D0099C97B /* ApartmentDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentDiffableDataSource.swift; sourceTree = "<group>"; };
 		ED6ACC5329DFD98F008F5002 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		ED6C69CD2A07F9DE00664289 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED862AF529F927B10092F02C /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED1F28F82A07C5AA00A50CAD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED1F28F02A077E3C00A50CAD /* APICaller.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		ED3A547E29E6263200B23CFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				ED4A8A3929DEA94700CEE2E3 /* Homely */,
+				ED3A547E29E6263200B23CFD /* Resources */,
 				ED4A8A3A29DEA94700CEE2E3 /* AppDelegate.swift */,
 				ED4A8A3C29DEA94700CEE2E3 /* SceneDelegate.swift */,
 				ED4A8A6D29DEACDE00CEE2E3 /* GoogleService-Info.plist */,
@@ -169,11 +192,11 @@
 		ED4A8A3929DEA94700CEE2E3 /* Homely */ = {
 			isa = PBXGroup;
 			children = (
-				ED3A547E29E6263200B23CFD /* Resources */,
 				ED4A8A4B29DEA94800CEE2E3 /* Info.plist */,
 				ED6ACC4C29DFD8A1008F5002 /* Model */,
 				ED6ACC4D29DFD8AA008F5002 /* View */,
 				ED6ACC4E29DFD8B1008F5002 /* Controller */,
+				ED1F28F82A07C5AA00A50CAD /* Services */,
 				ED6ACC4F29DFD8BE008F5002 /* Storyboard */,
 			);
 			path = Homely;
@@ -201,6 +224,7 @@
 			children = (
 				ED54092429E230A10099C97B /* Apartment.swift */,
 				ED54092629E2397D0099C97B /* ApartmentDiffableDataSource.swift */,
+				ED1F28F92A07C5C200A50CAD /* NewsTableViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +238,9 @@
 				ED862AF529F927B10092F02C /* DetailTableViewCell.swift */,
 				ED41F68229FA15D4006A5AD5 /* DetailMapCell.swift */,
 				ED0073E329FA61B200AE53D3 /* DetailCallCell.swift */,
+				ED6C69CD2A07F9DE00664289 /* NewsCollectionViewCell.swift */,
+				ED1F28F62A07C59B00A50CAD /* NewsTableViewCell.swift */,
+				ED1B4A032A0B4CD200AE9D3B /* NewsDetailUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,10 +248,12 @@
 		ED6ACC4E29DFD8B1008F5002 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED4A8A7E29DEBBAE00CEE2E3 /* MainTableViewController.swift */,
+				ED1F28EC2A077CEE00A50CAD /* NewsViewController.swift */,
+				ED28AE5129F8D25700210BAF /* DetailViewController.swift */,
+				ED1B4A012A0B4CB400AE9D3B /* NewsDetailViewController.swift */,
 				ED4A8A3E29DEA94700CEE2E3 /* ViewController.swift */,
 				ED4A8A7C29DEB88B00CEE2E3 /* RegisterViewController.swift */,
-				ED4A8A7E29DEBBAE00CEE2E3 /* MainTableViewController.swift */,
-				ED28AE5129F8D25700210BAF /* DetailViewController.swift */,
 				ED41F68429FA1999006A5AD5 /* MapViewController.swift */,
 			);
 			path = Controller;
@@ -389,21 +418,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED54092729E2397D0099C97B /* ApartmentDiffableDataSource.swift in Sources */,
+				ED6C69CE2A07F9DE00664289 /* NewsCollectionViewCell.swift in Sources */,
 				ED4A8A3F29DEA94700CEE2E3 /* ViewController.swift in Sources */,
 				ED4A8A7D29DEB88B00CEE2E3 /* RegisterViewController.swift in Sources */,
 				ED862AF629F927B10092F02C /* DetailTableViewCell.swift in Sources */,
+				ED1F28FA2A07C5C200A50CAD /* NewsTableViewModel.swift in Sources */,
+				ED1B4A042A0B4CD200AE9D3B /* NewsDetailUIView.swift in Sources */,
+				ED1B4A022A0B4CB400AE9D3B /* NewsDetailViewController.swift in Sources */,
 				ED4A8A4529DEA94700CEE2E3 /* Homely.xcdatamodeld in Sources */,
 				ED6ACC5429DFD98F008F5002 /* MainTableViewCell.swift in Sources */,
 				ED54092529E230A10099C97B /* Apartment.swift in Sources */,
+				ED1F28F12A077E3C00A50CAD /* APICaller.swift in Sources */,
 				ED41F68329FA15D4006A5AD5 /* DetailMapCell.swift in Sources */,
 				ED28AE4D29F8D12300210BAF /* DetailUIView.swift in Sources */,
 				ED28AE5229F8D25700210BAF /* DetailViewController.swift in Sources */,
 				ED28AE4B29F8D10B00210BAF /* DetailTableView.swift in Sources */,
 				ED4A8A3B29DEA94700CEE2E3 /* AppDelegate.swift in Sources */,
+				ED1F28ED2A077CEE00A50CAD /* NewsViewController.swift in Sources */,
 				ED4A8A7F29DEBBAE00CEE2E3 /* MainTableViewController.swift in Sources */,
 				ED41F68529FA1999006A5AD5 /* MapViewController.swift in Sources */,
 				ED0073E429FA61B200AE53D3 /* DetailCallCell.swift in Sources */,
 				ED4A8A3D29DEA94700CEE2E3 /* SceneDelegate.swift in Sources */,
+				ED1F28F72A07C59B00A50CAD /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

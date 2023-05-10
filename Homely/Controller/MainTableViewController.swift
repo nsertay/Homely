@@ -123,6 +123,8 @@ class MainTableViewController: UITableViewController {
                         DispatchQueue.main.async {
                             if let image = UIImage(data: data) {
                                 cell.cellImageView.image = image
+                                cell.cellImageView.contentMode = .scaleAspectFill
+                                cell.clipsToBounds = true
                             }
                         }
                     }
