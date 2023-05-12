@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SafariServices
 
 class NewsViewController: UIViewController {
     
@@ -107,6 +108,7 @@ extension NewsViewController {
                     NewsTableViewModel(
                         title: $0.title,
                         subtitle: $0.description ?? "No Desc",
+                        url: $0.url ,
                         imageURL: URL(string: $0.urlToImage ?? "")
                     )
                 })
@@ -141,13 +143,17 @@ extension NewsViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let rootVC = NewsDetailViewController()
-        rootVC.article = viewModels[indexPath.row]
-        
-        let navigationController = UINavigationController(rootViewController: rootVC)
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true)
+        guard let url = URL(string: viewModels[indexPath.row].url) else {
+            return
+        }
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+//        let rootVC = NewsDetailViewController()
+//        rootVC.article = viewModels[indexPath.row]
+//
+//        let navigationController = UINavigationController(rootViewController: rootVC)
+//        navigationController.modalPresentationStyle = .fullScreen
+//        present(navigationController, animated: true)
     }
    
 }
@@ -179,12 +185,17 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        let rootVC = NewsDetailViewController()
-        rootVC.article = viewModels[indexPath.row]
-        
-        let navigationController = UINavigationController(rootViewController: rootVC)
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true)
+        guard let url = URL(string: viewModels[indexPath.row].url) else {
+            return
+        }
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+//        let rootVC = NewsDetailViewController()
+//        rootVC.article = viewModels[indexPath.row]
+//
+//        let navigationController = UINavigationController(rootViewController: rootVC)
+//        navigationController.modalPresentationStyle = .fullScreen
+//        present(navigationController, animated: true)
     }
 
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Apartment: Hashable{
+struct Apartment: Hashable {
      
     var name: String = ""
     var price: String = ""

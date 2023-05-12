@@ -10,7 +10,7 @@ import SnapKit
 
 class NewsDetailViewController: UIViewController {
     
-    var article = NewsTableViewModel(title: "", subtitle: "", imageURL: URL(string: ""))
+    var article = NewsTableViewModel(title: "", subtitle: "", url: "", imageURL: URL(string: ""))
     
     let newsDetailView = NewsDetailUIView()
     

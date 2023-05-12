@@ -53,6 +53,20 @@ class MainTableViewController: UITableViewController {
         getData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        handleNotAuthenticated()
+    }
+    
+    private func handleNotAuthenticated() {
+        if Auth.auth().currentUser == nil {
+            let loginVC = LoginViewController()
+            loginVC.modalPresentationStyle = .fullScreen
+            present(loginVC, animated: false)
+        }
+    }
+    
     func getData() {
         
         db.collection("apartments").getDocuments { (querySnapshot, error) in
